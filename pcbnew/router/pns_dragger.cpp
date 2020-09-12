@@ -428,6 +428,7 @@ bool DRAGGER::dragWalkaround( const VECTOR2I& aP )
     case DM_VIA: // fixme...
     {
         dragViaWalkaround( m_initialVia, m_lastNode, aP );
+        ok = true;
 
         break;
     }
