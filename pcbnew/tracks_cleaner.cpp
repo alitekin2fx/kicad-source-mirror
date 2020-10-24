@@ -384,7 +384,7 @@ void TRACKS_CLEANER::cleanupSegments()
         {
             TRACK* track2 = *it2;
 
-            if( track2->HasFlag( IS_DELETED ) )
+            if( track2->Type() != PCB_TRACE_T || track2->HasFlag( IS_DELETED ) || track2->IsLocked() )
                 continue;
 
             if( track1->IsPointOnEnds( track2->GetStart() )
